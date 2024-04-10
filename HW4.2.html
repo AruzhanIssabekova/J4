@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW4.2</title>
+</head>
+<body>
+<script>
+    function power(ch, e) {
+       if (e === 0) {
+           return 1;
+       }
+       return ch * power(ch, e - 1);
+    }
+    const ch = parseInt(prompt("Введите число:"));
+    const e = parseInt(prompt("Введите степень:"));
+    document.write(power(ch, e));
+
+
+</script>
+</body>
+</html>

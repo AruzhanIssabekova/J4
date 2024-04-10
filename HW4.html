@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW4</title>
+</head>
+<body>
+<script>
+    function seconds(h, m, s) {
+       return h * 3600 + m * 60 + s;
+    }
+
+    function hms(s) {
+       let h = Math.floor(s/3600);
+       s %= 3600;
+       let m = Math.floor(s/60);
+       s %= 60;
+       return `${h}:${m}:${s}`;
+    }
+
+    function difference(h1, m1, s1, h2, m2, s2) {
+       const sd1 = seconds(h1, m1, s1);
+       const sd2 = seconds(h2, m2, s2);
+       const dif = Math.abs(sd1 - sd2);
+       return hms(dif);
+    }
+    const h1 = parseInt(prompt("Введите часы для первой даты:"));
+    const m1 = parseInt(prompt("Введите минуты для первой даты:"));
+    const s1 = parseInt(prompt("Введите секунды для первой даты:"));
+
+    const h2 = parseInt(prompt("Введите часы для второй даты:"));
+    const m2 = parseInt(prompt("Введите минуты для второй даты:"));
+    const s2 = parseInt(prompt("Введите секунды для второй даты:"));
+    document.write(difference(h1, m1, s1, h2, m2, s2));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW4.5</title>
+</head>
+<body>
+<script>
+    function prost(num) {
+       if (num <= 1) {
+        return false;
+       }
+       for (let i = 2; i <num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+       }
+       return true;
+    }
+    const ch1 = parseInt(prompt("Введите число:"));
+    document.write(prost(ch1));
+
+
+
+</script>
+</body>
+</html>
